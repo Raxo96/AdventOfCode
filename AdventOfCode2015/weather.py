@@ -11,20 +11,12 @@ def matrix_value(prev_value):
 
 while mtrx[2946][3028] == 0:
     for r in row:
-        try:
-            mtrx[r][column] = c
-        except IndexError:
-            print(r, column, c)
-            exit(999)
+        mtrx[r][column] = c
         column += 1
         c = matrix_value(c)
         continue
 
     row.insert(0, column)
     column = 0
-
-
-for _ in mtrx[0:10]:
-    print(_[0:10])
 
 print(mtrx[2946][3028])
