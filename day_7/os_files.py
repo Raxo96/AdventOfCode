@@ -41,10 +41,10 @@ for command in commands[1:]:
         all_files += int(command.split()[0])
         current_dir.update_size(int(command.split()[0]))
 
-big = []
+big_enough = []
 
 for _ in every_single_dir:
     if _.size >= 389918:
-        big.append(_.size)
+        big_enough.append(_.size)
 
-print(min(big))
+print(min(big_enough))
